@@ -1,5 +1,5 @@
 ---
-title: "Readme"
+title: "Data curation for wearable"
 author: "Cindy Barker"
 date: "12/25/2019"
 output: html_document
@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Data curation for wearable
+### Summary
 
 This project includes a R data cleaning script to create tidy data for wearable computing. 
 
@@ -17,18 +17,12 @@ The data set that it cleanses is from Samsung Galaxy S smartphone. A full descri
 
 The data for the project can be downloaded from [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
 
-You can embed an R code chunk like this:
+### R script 
+run_analysis.R is the script that performs the data cleansing. 
+It contains below functions:
 
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+* main: the driver function which downloads the zip file, contruct the dataframes, clean up names/labels and finally return a new dataframe by grouping the two index fields. 
+* prepareDataFile: helper function to download and unzip data files
+* loadVector: helper function to create vendor from txt file
+* loadDataFrame: helper function to create dataframe from txt file
+* prepareLabels: helper function to clean up labels
