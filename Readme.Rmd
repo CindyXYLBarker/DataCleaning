@@ -21,7 +21,7 @@ The data for the project can be downloaded from [here](https://d396qusza40orc.cl
 run_analysis.R is the script that performs the data cleansing. 
 It contains below functions:
 
-* main: the driver function which downloads the zip file, contruct the dataframes, clean up names/labels and finally return a new dataframe by grouping the two index fields. 
+* main: the driver function which downloads the zip file, contruct the dataframes, clean up names/labels, extract related fields and finally return a new dataframe by grouping the two index fields. 
 * prepareDataFile: helper function to download and unzip data files
 * loadVector: helper function to create vendor from txt file
 * loadDataFrame: helper function to create dataframe from txt file

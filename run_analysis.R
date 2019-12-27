@@ -33,6 +33,8 @@ loadDataFrame <- function(dataFile, names){
 prepareLabels <- function(names){
   newNames <- str_remove_all(names, "[\\(\\)]")
   newNames <- str_replace_all(newNames, "BodyBody", "Body")
+  newNames <- str_replace(newNames, "^f", "Frequency")
+  newNames <- str_replace(newNames, "^t", "Time")
   newNames <- paste("AVG-", newNames, sep="")
   newNames <- str_replace_all(newNames, "AVG-result", "Result")
   newNames <- str_replace_all(newNames, "AVG-subject", "Subject")
